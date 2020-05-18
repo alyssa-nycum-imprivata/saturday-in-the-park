@@ -1,0 +1,28 @@
+.nav-link-container {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header {
+    background-color: rgb(107, 185, 185);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid black;
+}
+
+.navbar h1 {
+    margin-left: 10px;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    color: rgb(160, 43, 170);
+}
+
+.navbar-title {
+    margin-left: 10px;
+}
