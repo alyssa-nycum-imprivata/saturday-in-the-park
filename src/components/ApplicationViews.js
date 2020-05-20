@@ -1,6 +1,7 @@
 import { Route } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
+import Register from "./auth/register";
 import '../index.css'
 
 const ApplicationViews = () => {
@@ -30,8 +31,8 @@ const ApplicationViews = () => {
             <Route
                 exact
                 path='/register'
-                render={() => {
-                    return "Register";
+                render={props => {
+                    return <Register {...props} />;
                 }}
             />
             <Route
