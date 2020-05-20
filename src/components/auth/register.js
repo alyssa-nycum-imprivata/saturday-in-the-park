@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import ApiManager from "../../modules/ApiManager";
 
 const Register = props => {
     const [credentials, setCredentials] = useState({ firstName: "", lastName: "", email: "", username: "", password: "", familyMembers: 0 });
@@ -21,21 +22,8 @@ const Register = props => {
             "family_members": credentials.familyMembers
         }
 
-        fetch("http://localhost:8000/register", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify(newCustomer)
-        })
-            .then(response => response.json())
-            .then(parsedResponse => {
-                if ("token" in parsedResponse) {
-                    sessionStorage.setItem("kennywood-token", parsedResponse.token)
-                }
-            })
-    }
+        ApiManager.registerNewCustomer(newCustomer)
+    };
 
     return (
         <form className="form--login" onSubmit={handleRegister}>
@@ -87,7 +75,7 @@ const Register = props => {
                     </button>
             </fieldset>
         </form>
-    )
+    );
 }
 
 export default Register;
