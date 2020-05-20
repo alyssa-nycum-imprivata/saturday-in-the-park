@@ -1,7 +1,7 @@
-import React, { useState } from "react"
-import ApiManager from "../../modules/ApiManager";
+import React, { useState } from 'react'
+import ApiManager from '../../modules/ApiManager';
 
-const Register = props => {
+const Register = (props) => {
     const [credentials, setCredentials] = useState({ firstName: "", lastName: "", email: "", username: "", password: "", familyMembers: 0 });
 
     const handleFieldChange = (evt) => {

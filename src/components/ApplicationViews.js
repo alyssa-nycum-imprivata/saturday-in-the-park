@@ -1,7 +1,7 @@
-import { Route } from "react-router-dom";
-import React from "react";
-import Home from "./home/Home";
-import Register from "./auth/register";
+import { Route } from 'react-router-dom';
+import React from 'react';
+import Home from './home/Home';
+import Register from './auth/register';
 import '../index.css'
 
 const ApplicationViews = () => {

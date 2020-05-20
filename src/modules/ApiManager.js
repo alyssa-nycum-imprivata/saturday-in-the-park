@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:8000/";
+const baseUrl = "http://localhost:8000";
 
 const ApiManager = {
     registerNewCustomer(newCustomer) {
@@ -16,6 +16,9 @@ const ApiManager = {
                     sessionStorage.setItem("kennywood-token", parsedResponse.token)
                 }
             })
+    },
+    getAllParkAreas() {
+        return fetch(`${baseUrl}/parkareas`).then(resp => resp.json())
     }
 };
 
