@@ -13,6 +13,34 @@ const ApplicationViews = () => {
                     return <Home />;
                 }}
             />
+            <Route
+                exact
+                path='/myitinerary'
+                render={() => {
+                    return "My itinerary";
+                }}
+            />
+            <Route
+                exact
+                path='/login'
+                render={() => {
+                    return "Login";
+                }}
+            />
+            <Route
+                exact
+                path='/register'
+                render={() => {
+                    return "Register";
+                }}
+            />
+            <Route
+                exact
+                path='/logout'
+                render={() => {
+                    return "Logout";
+                }}
+            />
         </>
     )
 }

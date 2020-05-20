@@ -3,7 +3,7 @@ import '../../index.css';
 
 const Home = () => {
     return (
-        <h2>Park Areas:</h2>
+        <h2>Kennywood Park Areas:</h2>
     )
 }
 
