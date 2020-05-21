@@ -2,7 +2,7 @@ import { Route } from 'react-router-dom';
 import React from 'react';
 import Home from './home/Home';
 import Register from './auth/register';
-import '../index.css'
+import '../index.css';
 
 const ApplicationViews = () => {
     return (
@@ -43,7 +43,7 @@ const ApplicationViews = () => {
                 }}
             />
         </>
-    )
-}
+    );
+};
 
-export default ApplicationViews
+export default ApplicationViews;

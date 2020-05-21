@@ -76,6 +76,6 @@ const Register = (props) => {
             </fieldset>
         </form>
     );
-}
+};
 
 export default Register;

@@ -7,7 +7,6 @@ const Home = (props) => {
 
     const getAllParkAreas = () => {
         return ApiManager.getAllParkAreas().then(parksFromApi => {
-            console.log(parksFromApi)
             setParkAreas(parksFromApi)
         })
     };
@@ -20,10 +19,21 @@ const Home = (props) => {
         <>
             <h2>Kennywood Park Areas:</h2>
             <ul>
-                {parkAreas.map(area => <li key={area.id} area={area} {...props}>{area.name} -- {area.theme}</li>)}
+                {parkAreas.map(area => 
+                    <li key={area.id} area={area} {...props}>
+                        {area.name} -- {area.theme}
+                        <ul>
+                            {area.attractions.map(attraction => 
+                                <li key={attraction.name} attraction={attraction} {...props}>
+                                    {attraction.name}
+                                </li>
+                            )}
+                        </ul>
+                    </li>
+                )}
             </ul>
         </>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;
