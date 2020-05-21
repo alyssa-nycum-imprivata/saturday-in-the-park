@@ -22,7 +22,7 @@ const Register = (props) => {
             "family_members": credentials.familyMembers
         }
 
-        ApiManager.registerNewCustomer(newCustomer)
+        ApiManager.registerNewCustomer(newCustomer).then(() => props.history.push("/"));
     };
 
     return (
