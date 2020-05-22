@@ -21,9 +21,7 @@ const Login = (props) => {
         ApiManager.loginCustomer(customerCredentials)
             .then(() => {
                 props.setUser()
-                props.history.push({
-                    pathname: "/"
-                })
+                props.history.push("/")
             })
     };
 
